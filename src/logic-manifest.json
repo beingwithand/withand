@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_audit_hash": "init",
+    "environment": "production"
+  },
+  "constitutional_constraints": {
+    "allow_erasure": false,
+    "require_explicit_visibility": true,
+    "min_review_period_hours": 72
+  },
+  "active_heuristics": [
+    {
+      "id": "H-001",
+      "name": "Anti-Viral Damping",
+      "weight": 0.85,
+      "logic": "IF velocity > 100 interactions/hour THEN apply_delay(120m)",
+      "justification_ref": "CONSTITUTION.md#Article5"
+    },
+    {
+      "id": "H-002",
+      "name": "Source Provenance",
+      "weight": 1.0,
+      "logic": "ALWAYS render metadata_header",
+      "justification_ref": "CONSTITUTION.md#Article3"
+    }
+  ]
+}
